@@ -35,12 +35,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       
-      - name: Build
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - run: yarn
-      - run: yarn build
+#       - name: Build
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: '12'
+#       - run: yarn
+#       - run: yarn build
       
       
       - name: Configure AWS credentials from account
