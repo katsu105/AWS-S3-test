@@ -35,14 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       
-#       - name: Build
-#         uses: actions/setup-node@v1
-#         with:
-#           node-version: '12'
-#       - run: yarn
-#       - run: yarn build
-      
-      
       - name: Configure AWS credentials from account
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -52,4 +44,4 @@ jobs:
 
       - name: Copy Files to s3
         run: |
-          aws s3 sync . s3://test-aws-service-k --delete
+          aws s3 sync ./public s3://test-aws-service-k --delete
