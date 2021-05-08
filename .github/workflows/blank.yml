@@ -52,4 +52,4 @@ jobs:
 
       - name: Copy Files to s3
         run: |
-          aws s3 sync ./public s3://test-aws-service-k --delete
+          aws s3 sync . s3://test-aws-service-k --delete
